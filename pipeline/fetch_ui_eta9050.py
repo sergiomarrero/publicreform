@@ -17,6 +17,7 @@ from __future__ import annotations
 import csv
 import io
 import os
+import re
 from datetime import date
 
 import states
@@ -28,13 +29,19 @@ LANDING = "https://oui.doleta.gov/unemploy/DataDownloads.asp"
 REPORT_BUILDER = "https://oui.doleta.gov/unemploy/btq.asp"
 
 # Raw ETA 9050 comma-delimited extract. The DataDownloads page links the raw
-# report files under /unemploy/csv/.
-RAW_CSV_URL = "https://oui.doleta.gov/unemploy/csv/9050.csv"
+# report files under /unemploy/csv/. The exact filename is confirmed against
+# the live host on the first reachable run; these candidates are tried in order.
+RAW_CSV_CANDIDATES = [
+    "https://oui.doleta.gov/unemploy/csv/9050.csv",
+    "https://oui.doleta.gov/unemploy/csv/ar9050.csv",
+    "https://oui.doleta.gov/unemploy/csv/eta9050.csv",
+]
 
-# Header fragments we accept for the precomputed within-14/21-day percentage.
-# If the raw file ships only time-lapse counts, _percent_within is computed
-# from the buckets instead.
-_PCT_HEADER_HINTS = ("14/21", "within 14", "pct_1421", "pct1421", "pcttimely")
+# Header signatures for the precomputed within-14/21-day percentage. Headers
+# are normalized to lowercase alphanumerics before matching, so "pct_within_1421",
+# "% within 14/21 days", and "Pct1421" all resolve to the same column. The exact
+# live header is pinned against the real file on the first reachable run.
+_PCT_NORM_SIGNATURES = ("1421", "within14", "within21", "timely")
 
 
 def _default_period() -> tuple[int, int]:
@@ -57,10 +64,13 @@ def _find_state_idx(header: list[str]) -> int | None:
     return None
 
 
+def _norm(text: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
 def _find_pct_idx(header: list[str]) -> int | None:
     for i, h in enumerate(header):
-        hl = h.strip().lower()
-        if any(hint in hl for hint in _PCT_HEADER_HINTS):
+        if any(sig in _norm(h) for sig in _PCT_NORM_SIGNATURES):
             return i
     return None
 
@@ -123,50 +133,50 @@ def fetch_ui_eta9050(
         year, month = _default_period()
     vintage = f"{year:04d}-{month:02d}"
 
-    try:
-        result = fetch(RAW_CSV_URL)
-    except FetchBlocked as blocked:
+    attempts: list[dict] = []
+    blocked_any = False
+    result = None
+    for url in RAW_CSV_CANDIDATES:
+        try:
+            r = fetch(url)
+        except FetchBlocked as blocked:
+            blocked_any = True
+            attempts.append({"url": blocked.url, "host": "blocked", "status": None,
+                             "deny_reason": blocked.deny_reason})
+            continue
+        attempts.append({"url": r.url, "host": r.host, "status": r.status})
+        if r.ok and r.content:
+            result = r
+            break
+
+    if result is None:
+        host = "blocked" if blocked_any else "unreachable"
+        deny = "host_not_allowed" if blocked_any else "no_candidate_returned_csv"
         return SourceFetch(
             source_id=SOURCE_ID,
             requested_vintage=vintage,
             vintage=None,
             rows=[],
             provenance={
-                "url": blocked.url,
-                "host": "blocked",
+                "url": RAW_CSV_CANDIDATES[0],
+                "host": host,
                 "status": None,
                 "fetched_at": utc_now_iso(),
                 "landing": LANDING,
                 "report_builder": REPORT_BUILDER,
                 "raw_files": [],
-                "live_fetch_blocked": True,
-                "deny_reason": blocked.deny_reason,
+                "attempts": attempts,
+                "live_fetch_blocked": blocked_any,
+                "deny_reason": deny,
             },
             blocked=True,
-            notes=[
-                f"Host {blocked.host} blocked by environment network policy "
-                f"({blocked.deny_reason}).",
-                "No ETA 9050 bytes available in this environment; values are null.",
-            ],
-        )
-
-    if not (result.ok and result.content):
-        return SourceFetch(
-            source_id=SOURCE_ID,
-            requested_vintage=vintage,
-            vintage=None,
-            rows=[],
-            provenance={
-                "url": result.url,
-                "host": result.host,
-                "status": result.status,
-                "fetched_at": result.fetched_at,
-                "landing": LANDING,
-                "raw_files": [],
-                "live_fetch_blocked": False,
-            },
-            blocked=True,
-            notes=[f"Fetch did not return a usable CSV (status {result.status})."],
+            notes=(
+                ["Host blocked by environment network policy (host_not_allowed).",
+                 "No ETA 9050 bytes available in this environment; values are null."]
+                if blocked_any else
+                ["No ETA 9050 CSV candidate returned usable bytes; confirm the "
+                 "raw file URL on the DataDownloads page."]
+            ),
         )
 
     os.makedirs(raw_dir, exist_ok=True)
@@ -175,6 +185,12 @@ def fetch_ui_eta9050(
         fh.write(result.content)
 
     rows, notes = _parse_csv(result.content, year, month)
+    if not rows:
+        notes.append(
+            "No ETA 9050 rows parsed. Confirm the state column and the "
+            "within-14/21-day percentage column against the live file, then "
+            "pin them via _PCT_HEADER_HINTS on the first reachable run."
+        )
     return SourceFetch(
         source_id=SOURCE_ID,
         requested_vintage=vintage,
@@ -188,6 +204,7 @@ def fetch_ui_eta9050(
             "landing": LANDING,
             "report_builder": REPORT_BUILDER,
             "raw_files": [raw_path],
+            "attempts": attempts,
             "live_fetch_blocked": False,
         },
         blocked=len(rows) == 0,

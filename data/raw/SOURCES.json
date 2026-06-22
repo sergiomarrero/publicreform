@@ -1,15 +1,35 @@
 {
-  "generated_at": "2026-06-22T03:00:47.856716+00:00",
+  "generated_at": "2026-06-22T03:08:14.158790+00:00",
   "note": "Provenance for every source fetch: URL, host that served the bytes, fetch timestamp, vintage, and whether the live host was blocked by the execution environment.",
   "sources": {
     "ui_eta9050": {
       "url": "https://oui.doleta.gov/unemploy/csv/9050.csv",
       "host": "blocked",
       "status": null,
-      "fetched_at": "2026-06-22T03:00:46.852304+00:00",
+      "fetched_at": "2026-06-22T03:08:13.491984+00:00",
       "landing": "https://oui.doleta.gov/unemploy/DataDownloads.asp",
       "report_builder": "https://oui.doleta.gov/unemploy/btq.asp",
       "raw_files": [],
+      "attempts": [
+        {
+          "url": "https://oui.doleta.gov/unemploy/csv/9050.csv",
+          "host": "blocked",
+          "status": null,
+          "deny_reason": "host_not_allowed"
+        },
+        {
+          "url": "https://oui.doleta.gov/unemploy/csv/ar9050.csv",
+          "host": "blocked",
+          "status": null,
+          "deny_reason": "host_not_allowed"
+        },
+        {
+          "url": "https://oui.doleta.gov/unemploy/csv/eta9050.csv",
+          "host": "blocked",
+          "status": null,
+          "deny_reason": "host_not_allowed"
+        }
+      ],
       "live_fetch_blocked": true,
       "deny_reason": "host_not_allowed",
       "source_id": "ui_eta9050",
@@ -17,7 +37,7 @@
       "vintage": null,
       "blocked": true,
       "notes": [
-        "Host oui.doleta.gov blocked by environment network policy (host_not_allowed).",
+        "Host blocked by environment network policy (host_not_allowed).",
         "No ETA 9050 bytes available in this environment; values are null."
       ]
     },
@@ -25,7 +45,7 @@
       "url": "https://www.fns.usda.gov/snap/qc/timeliness/apt-fy24",
       "host": "blocked",
       "status": null,
-      "fetched_at": "2026-06-22T03:00:47.165063+00:00",
+      "fetched_at": "2026-06-22T03:08:13.863615+00:00",
       "landing": "https://www.fns.usda.gov/snap/qc/timeliness",
       "raw_files": [
         "data/raw/snap_apt_fy24_published.csv"
@@ -62,7 +82,7 @@
       "pdf_url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY%202023%20WIOA%20National%20Performance%20Summary.pdf",
       "host": "blocked",
       "status": null,
-      "fetched_at": "2026-06-22T03:00:47.856537+00:00",
+      "fetched_at": "2026-06-22T03:08:14.158471+00:00",
       "at_a_glance_not_used": "https://www.dol.gov/agencies/eta/performance/wioa-performance",
       "archive": "https://www.dol.gov/agencies/eta/performance/results-archive",
       "raw_files": [],
