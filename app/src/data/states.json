@@ -1,0 +1,2771 @@
+{
+  "meta": {
+    "generated_at": "2026-06-22T03:08:14.160409+00:00",
+    "version": "v1",
+    "scope": "Ranked and compared views cover 50 states plus DC (51 jurisdictions). Territories are shown where data exists and are excluded from ranking.",
+    "ranking_jurisdiction_count": 51,
+    "interpretation": "This dashboard is descriptive and correlational. It shows variation in administrative performance across jurisdictions. It does not claim that administration causes mobility outcomes.",
+    "composite_index": {
+      "status": "deferred",
+      "note": "A blended 0-100 composite index is planned for a later stage. v1 shows raw metrics only; no score is computed."
+    },
+    "build": {
+      "status": "interim",
+      "built_at": "2026-06-22T03:14:13.656419+00:00",
+      "source_file": "states.preview.json",
+      "live_metrics": [
+        "snap_apt_timely"
+      ],
+      "pending_metrics": [
+        "ui_first_pay_14_21",
+        "wioa_adult_emp_q2",
+        "wioa_adult_median_earnings_q2",
+        "wioa_adult_credential"
+      ],
+      "note": "Interim build. Live dimensions are validated and labeled with source and vintage. Pending dimensions are shown as pending a source, not as numbers, until their live feed is ingested."
+    }
+  },
+  "metrics": {
+    "ui_first_pay_14_21": {
+      "label": "UI first payments within 14/21 days",
+      "short_label": "UI % within 14/21 days",
+      "definition": "Percent of intrastate unemployment insurance first payments made within 14/21 days of the first compensable week.",
+      "agency": "DOL Employment and Training Administration",
+      "source_name": "ETA 9050 First Payment Time Lapse",
+      "primary_url": "https://oui.doleta.gov/unemploy/DataDownloads.asp",
+      "unit": "percent",
+      "direction": "higher_is_better",
+      "threshold": 87.0,
+      "threshold_label": "Federal Secretary's Standard: 87% within 14/21 days",
+      "dimension": "speed",
+      "source_id": "ui_eta9050",
+      "vintage": null,
+      "available": false,
+      "live_fetch_blocked": true,
+      "source_label": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration"
+    },
+    "snap_apt_timely": {
+      "label": "SNAP applications processed timely",
+      "short_label": "SNAP APT % timely",
+      "definition": "Percent of SNAP applications processed timely, within 30 days for regular applications and 7 days for expedited, from the SNAP Quality Control active-case sample.",
+      "agency": "USDA Food and Nutrition Service",
+      "source_name": "SNAP Application Processing Timeliness (APT)",
+      "primary_url": "https://www.fns.usda.gov/snap/qc/timeliness",
+      "unit": "percent",
+      "direction": "higher_is_better",
+      "threshold": 90.0,
+      "threshold_label": "Corrective-action threshold: 90% timely",
+      "dimension": "speed",
+      "source_id": "snap_apt",
+      "vintage": "FY2024",
+      "available": true,
+      "live_fetch_blocked": true,
+      "source_label": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service"
+    },
+    "wioa_adult_emp_q2": {
+      "label": "WIOA Adult employment rate, Q2 after exit",
+      "short_label": "WIOA Adult Q2 employment %",
+      "definition": "WIOA Title I Adult employment rate in the second quarter after program exit.",
+      "agency": "DOL Employment and Training Administration",
+      "source_name": "WIOA State Performance (ETA-9169)",
+      "primary_url": "https://www.dol.gov/agencies/eta/performance/results-archive",
+      "unit": "percent",
+      "direction": "higher_is_better",
+      "threshold": null,
+      "threshold_label": null,
+      "dimension": "speed",
+      "source_id": "wioa",
+      "vintage": null,
+      "available": false,
+      "live_fetch_blocked": true,
+      "source_label": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration"
+    },
+    "wioa_adult_median_earnings_q2": {
+      "label": "WIOA Adult median earnings, Q2 after exit",
+      "short_label": "WIOA Adult median earnings",
+      "definition": "WIOA Title I Adult median earnings in the second quarter after program exit, in dollars.",
+      "agency": "DOL Employment and Training Administration",
+      "source_name": "WIOA State Performance (ETA-9169)",
+      "primary_url": "https://www.dol.gov/agencies/eta/performance/results-archive",
+      "unit": "usd",
+      "direction": "higher_is_better",
+      "threshold": null,
+      "threshold_label": null,
+      "dimension": "outcome",
+      "source_id": "wioa",
+      "vintage": null,
+      "available": false,
+      "live_fetch_blocked": true,
+      "source_label": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration"
+    },
+    "wioa_adult_credential": {
+      "label": "WIOA Adult credential attainment rate",
+      "short_label": "WIOA credential %",
+      "definition": "WIOA Title I Adult credential attainment rate.",
+      "agency": "DOL Employment and Training Administration",
+      "source_name": "WIOA State Performance (ETA-9169)",
+      "primary_url": "https://www.dol.gov/agencies/eta/performance/results-archive",
+      "unit": "percent",
+      "direction": "higher_is_better",
+      "threshold": null,
+      "threshold_label": null,
+      "dimension": "outcome",
+      "source_id": "wioa",
+      "vintage": null,
+      "available": false,
+      "live_fetch_blocked": true,
+      "source_label": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration"
+    }
+  },
+  "states": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 93.02,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "AK",
+      "name": "Alaska",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 57.93,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "AZ",
+      "name": "Arizona",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 90.29,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "AR",
+      "name": "Arkansas",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 61.94,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "CA",
+      "name": "California",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 80.21,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "CO",
+      "name": "Colorado",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 66.87,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "CT",
+      "name": "Connecticut",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 89.11,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "DE",
+      "name": "Delaware",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 75.08,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "DC",
+      "name": "District of Columbia",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 56.73,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 63.31,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "GA",
+      "name": "Georgia",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 67.22,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "GU",
+      "name": "Guam",
+      "excluded_from_ranking": true,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 50.86,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": true
+      }
+    },
+    {
+      "code": "HI",
+      "name": "Hawaii",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 68.87,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "ID",
+      "name": "Idaho",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 91.02,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "IL",
+      "name": "Illinois",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 93.56,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "IN",
+      "name": "Indiana",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 80.04,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "IA",
+      "name": "Iowa",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 64.66,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "KS",
+      "name": "Kansas",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 81.99,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "KY",
+      "name": "Kentucky",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 87.38,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 87.08,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "ME",
+      "name": "Maine",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 64.93,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "MD",
+      "name": "Maryland",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 91.04,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "MA",
+      "name": "Massachusetts",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 85.45,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "MI",
+      "name": "Michigan",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 76.05,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "MN",
+      "name": "Minnesota",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 80.37,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 79.38,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "MO",
+      "name": "Missouri",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 78.28,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "MT",
+      "name": "Montana",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 66.88,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "NE",
+      "name": "Nebraska",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 88.96,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "NV",
+      "name": "Nevada",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 93.09,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "NH",
+      "name": "New Hampshire",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 89.32,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "NJ",
+      "name": "New Jersey",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 77.61,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "NM",
+      "name": "New Mexico",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 52.36,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "NY",
+      "name": "New York",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 81.61,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "NC",
+      "name": "North Carolina",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 84.4,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "ND",
+      "name": "North Dakota",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 57.02,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "OH",
+      "name": "Ohio",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 91.93,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "OK",
+      "name": "Oklahoma",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 88.65,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "OR",
+      "name": "Oregon",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 71.83,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "PA",
+      "name": "Pennsylvania",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 90.29,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "PR",
+      "name": "Puerto Rico",
+      "excluded_from_ranking": true,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": null,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": null,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": true
+      }
+    },
+    {
+      "code": "RI",
+      "name": "Rhode Island",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 93.52,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "SC",
+      "name": "South Carolina",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 73.48,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "SD",
+      "name": "South Dakota",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 85.89,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 42.72,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "TX",
+      "name": "Texas",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 75.48,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "VI",
+      "name": "U.S. Virgin Islands",
+      "excluded_from_ranking": true,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 77.63,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": true
+      }
+    },
+    {
+      "code": "UT",
+      "name": "Utah",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 89.82,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "VT",
+      "name": "Vermont",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 84.47,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "VA",
+      "name": "Virginia",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 83.23,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "WA",
+      "name": "Washington",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 90.36,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "WV",
+      "name": "West Virginia",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 75.8,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": true,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "WI",
+      "name": "Wisconsin",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 95.62,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    },
+    {
+      "code": "WY",
+      "name": "Wyoming",
+      "excluded_from_ranking": false,
+      "metrics": {
+        "ui_first_pay_14_21": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "ETA 9050 First Payment Time Lapse, 2026-05, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "snap_apt_timely": {
+          "value": 90.43,
+          "unit": "percent",
+          "vintage": "FY2024",
+          "source": "SNAP Application Processing Timeliness (APT), FY2024, USDA Food and Nutrition Service",
+          "null_reason": null
+        },
+        "wioa_adult_emp_q2": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_median_earnings_q2": {
+          "value": null,
+          "unit": "usd",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        },
+        "wioa_adult_credential": {
+          "value": null,
+          "unit": "percent",
+          "vintage": null,
+          "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
+          "null_reason": "source_host_blocked_by_network_policy"
+        }
+      },
+      "flags": {
+        "snap_below_corrective_action": false,
+        "ui_below_secretarys_standard": null,
+        "excluded_from_ranking": false
+      }
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://oui.doleta.gov/unemploy/csv/9050.csv",
+      "host": "blocked",
+      "status": null,
+      "fetched_at": "2026-06-22T03:08:13.491984+00:00",
+      "landing": "https://oui.doleta.gov/unemploy/DataDownloads.asp",
+      "report_builder": "https://oui.doleta.gov/unemploy/btq.asp",
+      "raw_files": [],
+      "attempts": [
+        {
+          "url": "https://oui.doleta.gov/unemploy/csv/9050.csv",
+          "host": "blocked",
+          "status": null,
+          "deny_reason": "host_not_allowed"
+        },
+        {
+          "url": "https://oui.doleta.gov/unemploy/csv/ar9050.csv",
+          "host": "blocked",
+          "status": null,
+          "deny_reason": "host_not_allowed"
+        },
+        {
+          "url": "https://oui.doleta.gov/unemploy/csv/eta9050.csv",
+          "host": "blocked",
+          "status": null,
+          "deny_reason": "host_not_allowed"
+        }
+      ],
+      "live_fetch_blocked": true,
+      "deny_reason": "host_not_allowed",
+      "source_id": "ui_eta9050",
+      "requested_vintage": "2026-05",
+      "vintage": null,
+      "blocked": true,
+      "notes": [
+        "Host blocked by environment network policy (host_not_allowed).",
+        "No ETA 9050 bytes available in this environment; values are null."
+      ]
+    },
+    {
+      "url": "https://www.fns.usda.gov/snap/qc/timeliness/apt-fy24",
+      "host": "blocked",
+      "status": null,
+      "fetched_at": "2026-06-22T03:08:13.863615+00:00",
+      "landing": "https://www.fns.usda.gov/snap/qc/timeliness",
+      "raw_files": [
+        "data/raw/snap_apt_fy24_published.csv"
+      ],
+      "attempts": [
+        {
+          "url": "https://www.fns.usda.gov/snap/qc/timeliness/apt-fy24",
+          "host": "www.fns.usda.gov",
+          "status": null,
+          "blocked": true,
+          "deny_reason": "host_not_allowed"
+        },
+        {
+          "url": "https://www.fna.usda.gov/snap/qc/timeliness/apt-fy24",
+          "host": "www.fna.usda.gov",
+          "status": null,
+          "blocked": true,
+          "deny_reason": "host_not_allowed"
+        }
+      ],
+      "live_fetch_blocked": true,
+      "source_of_record": "docs/LANDSCAPE_BRIEF.md Part B2: published USDA FNS SNAP APT FY2024 table, transcribed",
+      "source_id": "snap_apt",
+      "requested_vintage": "FY2024",
+      "vintage": "FY2024",
+      "blocked": true,
+      "notes": [
+        "Live FNS and FNA hosts blocked by environment network policy.",
+        "Values taken from the published FY2024 table transcribed in the brief."
+      ]
+    },
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY2023%20Annual%20Report%20Accessible%20File.xlsx",
+      "pdf_url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY%202023%20WIOA%20National%20Performance%20Summary.pdf",
+      "host": "blocked",
+      "status": null,
+      "fetched_at": "2026-06-22T03:08:14.158471+00:00",
+      "at_a_glance_not_used": "https://www.dol.gov/agencies/eta/performance/wioa-performance",
+      "archive": "https://www.dol.gov/agencies/eta/performance/results-archive",
+      "raw_files": [],
+      "attempts": [
+        {
+          "url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY2023%20Annual%20Report%20Accessible%20File.xlsx",
+          "host": "blocked",
+          "status": null,
+          "blocked": true,
+          "deny_reason": "host_not_allowed"
+        },
+        {
+          "url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY%202023%20WIOA%20National%20Performance%20Summary.pdf",
+          "host": "blocked",
+          "status": null,
+          "blocked": true,
+          "deny_reason": "host_not_allowed"
+        }
+      ],
+      "live_fetch_blocked": true,
+      "source_id": "wioa",
+      "requested_vintage": "PY2023",
+      "vintage": null,
+      "blocked": true,
+      "notes": [
+        "No WIOA PY2023 state rows available in this environment; the DOL host is blocked by the network policy and the brief carries only national PY2023 headline figures, not a state table."
+      ]
+    }
+  ]
+}

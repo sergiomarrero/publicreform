@@ -1,0 +1,14 @@
+# Keep the Vercel upload lean. Vercel installs dependencies and builds from
+# source using the buildCommand in vercel.json, so local build artifacts and
+# the Python pipeline are not needed in the deployment. Paths are anchored with
+# a leading slash so app/src/data (which the app imports) is not excluded.
+node_modules
+/app/node_modules
+/app/dist
+/.git
+/pipeline
+/data
+/archive
+/docs
+__pycache__
+*.pyc
