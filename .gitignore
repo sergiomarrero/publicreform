@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Prepared Glacier archives: large, uploaded to Glacier, not committed to git.
+archive/out/
+archive/last_backup.json
+
+# Downloaded primary source binaries are archived to Glacier, not committed.
+# Provenance (SOURCES.json), citation pointers, the manual README, and the
+# published SNAP CSV used as the blocked-mode source of record are kept.
+data/raw/*.pdf
+data/raw/*.xlsx
+data/raw/*.html
+data/raw/ui_eta9050_*.csv
+
+# Transient inspection artifact written when the validation gate does not pass.
+data/states.preview.json
+
+# Node / Vercel build output (Stage 2 app)
+node_modules/
+app/node_modules/
+app/dist/
+app/.vercel/

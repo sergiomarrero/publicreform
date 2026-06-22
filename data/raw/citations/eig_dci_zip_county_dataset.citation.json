@@ -1,0 +1,11 @@
+{
+  "id": "eig_dci_zip_county_dataset",
+  "title": "EIG Distressed Communities Index, ZIP and county dataset",
+  "author": "Economic Innovation Group",
+  "url": "https://eig.org/dci-hub/",
+  "vintage": "2025",
+  "tier": 2,
+  "access_note": "Free but behind a license tied to a .org/.edu/.gov email. Manual fetch by the user; promote to a full-file archive once downloaded into data/raw/manual/.",
+  "citation_pointer": true,
+  "written_at": "2026-06-22T03:00:47.857847+00:00"
+}

@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-06-22T03:00:47.859674+00:00",
+  "gate": "stage1_pre_ui",
+  "overall_pass": false,
+  "summary": {
+    "pass": 4,
+    "fail": 0,
+    "blocked": 4
+  },
+  "ingested_vintages": {
+    "ui_eta9050": "2026-05",
+    "snap_apt": "FY2024",
+    "wioa": "PY2023"
+  },
+  "checks": [
+    {
+      "id": "ui_present",
+      "source": "ui_eta9050",
+      "vintage": null,
+      "status": "blocked",
+      "detail": "No ETA 9050 rows fetched."
+    },
+    {
+      "id": "snap_present",
+      "source": "snap_apt",
+      "vintage": "FY2024",
+      "status": "pass",
+      "detail": "53 SNAP APT rows parsed."
+    },
+    {
+      "id": "snap_spot_anchors",
+      "source": "snap_apt",
+      "vintage": "FY2024",
+      "status": "pass",
+      "detail": "All spot anchors matched.",
+      "verification_mode": "transcription_consistency"
+    },
+    {
+      "id": "snap_extremes",
+      "source": "snap_apt",
+      "vintage": "FY2024",
+      "status": "pass",
+      "detail": "max=Wisconsin 95.62, min=Tennessee 42.72",
+      "verification_mode": "transcription_consistency"
+    },
+    {
+      "id": "snap_ranking_coverage",
+      "source": "snap_apt",
+      "vintage": "FY2024",
+      "status": "pass",
+      "detail": "All 51 ranking jurisdictions present in SNAP table."
+    },
+    {
+      "id": "wioa_vintage",
+      "source": "wioa",
+      "vintage": null,
+      "status": "blocked",
+      "detail": "No WIOA national headline figures available to confirm the PY2023 vintage. The DOL host is blocked and the brief carries national figures for reference only, not a fetched state table."
+    },
+    {
+      "id": "wioa_state_coverage",
+      "source": "wioa",
+      "vintage": null,
+      "status": "blocked",
+      "detail": "No WIOA state rows fetched."
+    },
+    {
+      "id": "ui_render_coverage_51",
+      "source": "ui_eta9050",
+      "vintage": null,
+      "status": "blocked",
+      "detail": "51 of 51 jurisdictions lack a UI value: ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME', 'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM', 'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']"
+    }
+  ],
+  "notes": [
+    "Gate did not pass. data/states.json is intentionally not written for UI consumption until every check passes.",
+    "ui_eta9050: live host blocked by environment network policy; see SOURCES.json for attempts.",
+    "snap_apt: live host blocked by environment network policy; see SOURCES.json for attempts.",
+    "wioa: live host blocked by environment network policy; see SOURCES.json for attempts."
+  ]
+}

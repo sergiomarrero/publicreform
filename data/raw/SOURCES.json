@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-06-22T03:00:47.856716+00:00",
+  "note": "Provenance for every source fetch: URL, host that served the bytes, fetch timestamp, vintage, and whether the live host was blocked by the execution environment.",
+  "sources": {
+    "ui_eta9050": {
+      "url": "https://oui.doleta.gov/unemploy/csv/9050.csv",
+      "host": "blocked",
+      "status": null,
+      "fetched_at": "2026-06-22T03:00:46.852304+00:00",
+      "landing": "https://oui.doleta.gov/unemploy/DataDownloads.asp",
+      "report_builder": "https://oui.doleta.gov/unemploy/btq.asp",
+      "raw_files": [],
+      "live_fetch_blocked": true,
+      "deny_reason": "host_not_allowed",
+      "source_id": "ui_eta9050",
+      "requested_vintage": "2026-05",
+      "vintage": null,
+      "blocked": true,
+      "notes": [
+        "Host oui.doleta.gov blocked by environment network policy (host_not_allowed).",
+        "No ETA 9050 bytes available in this environment; values are null."
+      ]
+    },
+    "snap_apt": {
+      "url": "https://www.fns.usda.gov/snap/qc/timeliness/apt-fy24",
+      "host": "blocked",
+      "status": null,
+      "fetched_at": "2026-06-22T03:00:47.165063+00:00",
+      "landing": "https://www.fns.usda.gov/snap/qc/timeliness",
+      "raw_files": [
+        "data/raw/snap_apt_fy24_published.csv"
+      ],
+      "attempts": [
+        {
+          "url": "https://www.fns.usda.gov/snap/qc/timeliness/apt-fy24",
+          "host": "www.fns.usda.gov",
+          "status": null,
+          "blocked": true,
+          "deny_reason": "host_not_allowed"
+        },
+        {
+          "url": "https://www.fna.usda.gov/snap/qc/timeliness/apt-fy24",
+          "host": "www.fna.usda.gov",
+          "status": null,
+          "blocked": true,
+          "deny_reason": "host_not_allowed"
+        }
+      ],
+      "live_fetch_blocked": true,
+      "source_of_record": "docs/LANDSCAPE_BRIEF.md Part B2: published USDA FNS SNAP APT FY2024 table, transcribed",
+      "source_id": "snap_apt",
+      "requested_vintage": "FY2024",
+      "vintage": "FY2024",
+      "blocked": true,
+      "notes": [
+        "Live FNS and FNA hosts blocked by environment network policy.",
+        "Values taken from the published FY2024 table transcribed in the brief."
+      ]
+    },
+    "wioa": {
+      "url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY2023%20Annual%20Report%20Accessible%20File.xlsx",
+      "pdf_url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY%202023%20WIOA%20National%20Performance%20Summary.pdf",
+      "host": "blocked",
+      "status": null,
+      "fetched_at": "2026-06-22T03:00:47.856537+00:00",
+      "at_a_glance_not_used": "https://www.dol.gov/agencies/eta/performance/wioa-performance",
+      "archive": "https://www.dol.gov/agencies/eta/performance/results-archive",
+      "raw_files": [],
+      "attempts": [
+        {
+          "url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY2023%20Annual%20Report%20Accessible%20File.xlsx",
+          "host": "blocked",
+          "status": null,
+          "blocked": true,
+          "deny_reason": "host_not_allowed"
+        },
+        {
+          "url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY%202023%20WIOA%20National%20Performance%20Summary.pdf",
+          "host": "blocked",
+          "status": null,
+          "blocked": true,
+          "deny_reason": "host_not_allowed"
+        }
+      ],
+      "live_fetch_blocked": true,
+      "source_id": "wioa",
+      "requested_vintage": "PY2023",
+      "vintage": null,
+      "blocked": true,
+      "notes": [
+        "No WIOA PY2023 state rows available in this environment; the DOL host is blocked by the network policy and the brief carries only national PY2023 headline figures, not a state table."
+      ]
+    }
+  }
+}

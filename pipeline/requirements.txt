@@ -1,0 +1,9 @@
+# Stage 1 data pipeline dependencies.
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=4.9
+openpyxl>=3.1
+# Optional PDF text backend for the WIOA national summary. The pipeline reads
+# WIOA state tables from the Excel file and treats the PDF as redundant, so it
+# degrades gracefully if this import is unavailable in a given environment.
+pypdf>=4.0
