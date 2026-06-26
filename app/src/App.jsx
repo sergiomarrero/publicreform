@@ -4,16 +4,29 @@ import StateTable from "./components/StateTable.jsx";
 import SourcesPanel from "./components/SourcesPanel.jsx";
 import Methodology from "./components/Methodology.jsx";
 import CompositePlaceholder from "./components/CompositePlaceholder.jsx";
-import { compareValues } from "./format.js";
+import { COLUMN_ORDER, compareValues } from "./format.js";
+
+const build = dataset.meta.build || { status: "interim" };
+const interim = build.status !== "full";
+
+// Show only dimensions that have data. Pending dimensions are summarized rather
+// than rendered as columns of "Pending", so the table leads with real numbers.
+const liveColumns = COLUMN_ORDER.filter((k) => dataset.metrics[k]?.available);
+const columns = liveColumns.length ? liveColumns : COLUMN_ORDER;
+const pendingColumns = COLUMN_ORDER.filter((k) => !dataset.metrics[k]?.available);
+
+const liveLabels = liveColumns.map((k) => dataset.metrics[k].short_label);
+const pendingLabels = pendingColumns.map((k) => dataset.metrics[k].short_label);
+
+// With a single live dimension, default to ranking by it. Otherwise alphabetical.
+const DEFAULT_SORT_KEY = liveColumns.length === 1 ? liveColumns[0] : "name";
+const DEFAULT_SORT_DIR = liveColumns.length === 1 ? "desc" : "asc";
 
 export default function App() {
   const [query, setQuery] = useState("");
   const [showTerritories, setShowTerritories] = useState(false);
-  const [sortKey, setSortKey] = useState("name");
-  const [sortDir, setSortDir] = useState("asc");
-
-  const build = dataset.meta.build || { status: "interim" };
-  const interim = build.status !== "full";
+  const [sortKey, setSortKey] = useState(DEFAULT_SORT_KEY);
+  const [sortDir, setSortDir] = useState(DEFAULT_SORT_DIR);
 
   const onSort = (key) => {
     if (sortKey === key) {
@@ -80,11 +93,13 @@ export default function App() {
       {interim ? (
         <div className="build-banner">
           <div className="wrap">
-            <strong>Interim build.</strong> {build.note} Live now:{" "}
-            {(build.live_metrics || []).length} of{" "}
-            {(build.live_metrics || []).length +
-              (build.pending_metrics || []).length}{" "}
-            dimensions. Pending dimensions show pending, not numbers.
+            <strong>Interim build.</strong> Live now: {liveLabels.join(", ")}
+            {liveColumns.length
+              ? ` (${dataset.metrics[liveColumns[0]].vintage}, ${rankingCount} jurisdictions)`
+              : ""}
+            . Coming soon as their live feeds are ingested:{" "}
+            {pendingLabels.join(", ")}. Pending dimensions are not shown as
+            numbers; see the Sources panel for each one.
           </div>
         </div>
       ) : null}
@@ -117,10 +132,18 @@ export default function App() {
         <StateTable
           dataset={dataset}
           rows={rows}
+          columns={columns}
           sortKey={sortKey}
           sortDir={sortDir}
           onSort={onSort}
         />
+
+        {pendingColumns.length ? (
+          <p className="coming-soon-note">
+            Coming soon: {pendingLabels.join(", ")}. These dimensions populate
+            once their live source feeds are ingested.
+          </p>
+        ) : null}
 
         <CompositePlaceholder dataset={dataset} />
         <SourcesPanel dataset={dataset} />

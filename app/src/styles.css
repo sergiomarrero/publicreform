@@ -288,6 +288,12 @@ td.pending {
   visibility: visible;
 }
 
+.coming-soon-note {
+  margin: 12px 2px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 /* Panels */
 .panel {
   background: var(--card);

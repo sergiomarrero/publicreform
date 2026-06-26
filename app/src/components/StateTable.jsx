@@ -1,6 +1,6 @@
 import React from "react";
 import Tooltip from "./Tooltip.jsx";
-import { COLUMN_ORDER, formatValue, pendingReason } from "../format.js";
+import { formatValue, pendingReason } from "../format.js";
 
 function Cell({ stateRow, metricKey, metricMeta }) {
   const cell = stateRow.metrics[metricKey];
@@ -31,7 +31,14 @@ function Cell({ stateRow, metricKey, metricMeta }) {
   );
 }
 
-export default function StateTable({ dataset, rows, sortKey, sortDir, onSort }) {
+export default function StateTable({
+  dataset,
+  rows,
+  columns,
+  sortKey,
+  sortDir,
+  onSort,
+}) {
   const metrics = dataset.metrics;
 
   const headerSort = (key) => {
@@ -50,7 +57,7 @@ export default function StateTable({ dataset, rows, sortKey, sortDir, onSort }) 
             >
               State
             </th>
-            {COLUMN_ORDER.map((key) => {
+            {columns.map((key) => {
               const m = metrics[key];
               return (
                 <th
@@ -99,7 +106,7 @@ export default function StateTable({ dataset, rows, sortKey, sortDir, onSort }) 
                   </span>
                 ) : null}
               </td>
-              {COLUMN_ORDER.map((key) => (
+              {columns.map((key) => (
                 <Cell
                   key={key}
                   stateRow={s}
