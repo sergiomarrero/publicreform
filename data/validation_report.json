@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-26T11:27:29.392299+00:00",
+  "generated_at": "2026-06-26T16:18:38.932777+00:00",
   "gate": "stage1_pre_ui",
   "overall_pass": false,
   "summary": {
-    "pass": 4,
+    "pass": 6,
     "fail": 0,
-    "blocked": 4
+    "blocked": 2
   },
   "ingested_vintages": {
     "ui_eta9050": "2026-05",
@@ -53,16 +53,16 @@
     {
       "id": "wioa_vintage",
       "source": "wioa",
-      "vintage": null,
-      "status": "blocked",
-      "detail": "No WIOA national headline figures available to confirm the PY2023 vintage. The DOL host is blocked and the brief carries national figures for reference only, not a fetched state table."
+      "vintage": "PY2023",
+      "status": "pass",
+      "detail": "PY2023 anchors matched: Adult Q2 74.1%, DW median earnings $9397."
     },
     {
       "id": "wioa_state_coverage",
       "source": "wioa",
-      "vintage": null,
-      "status": "blocked",
-      "detail": "No WIOA state rows fetched."
+      "vintage": "PY2023",
+      "status": "pass",
+      "detail": "All 51 ranking jurisdictions present in WIOA table."
     },
     {
       "id": "ui_render_coverage_51",
@@ -75,7 +75,6 @@
   "notes": [
     "Gate did not pass. data/states.json is intentionally not written for UI consumption until every check passes.",
     "ui_eta9050: live host blocked by environment network policy; see SOURCES.json for attempts.",
-    "snap_apt: live host blocked by environment network policy; see SOURCES.json for attempts.",
-    "wioa: live host blocked by environment network policy; see SOURCES.json for attempts."
+    "snap_apt: live host blocked by environment network policy; see SOURCES.json for attempts."
   ]
 }

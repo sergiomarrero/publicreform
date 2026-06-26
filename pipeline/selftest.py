@@ -71,35 +71,53 @@ def test_ui_csv_precomputed() -> bool:
 
 
 def test_wioa_excel() -> bool:
+    # Mirror the real Accessible File: a Performance sheet, one row per
+    # (state, program), separate Target and Actual columns, a National US row.
     from openpyxl import Workbook
 
     wb = Workbook()
     ws = wb.active
+    ws.title = "Performance"
     ws.append([
-        "State",
-        "Adult Employment Rate 2nd Quarter After Exit",
-        "Adult Employment Rate 4th Quarter After Exit",
-        "Adult Median Earnings 2nd Quarter After Exit",
-        "Adult Credential Attainment Rate",
-        "Adult Measurable Skill Gains",
-        "Dislocated Worker Median Earnings 2nd Quarter After Exit",
+        "State Name", "State Code", "Program",
+        "Total Statewide: Total Participants Served",
+        "Total Statewide: Total Participants Exited",
+        "Total Statewide, Target: Employment Q2 Rate",
+        "Total Statewide, Target: Employment Q4 Rate",
+        "Total Statewide, Target: Median Earnings",
+        "Total Statewide, Target: Credential Rate",
+        "Total Statewide, Target: Measurable Skills Rate",
+        "Total Statewide, Actual: Employment Q2 Number",
+        "Total Statewide, Actual: Employment Q2 Rate",
+        "Total Statewide, Actual: Employment Q4 Number",
+        "Total Statewide, Actual: Employment Q4 Rate",
+        "Total Statewide, Actual: Median Earnings",
+        "Total Statewide, Actual: Credential Number",
+        "Total Statewide, Actual: Credential Rate",
+        "Total Statewide, Actual: Measurable Skills Number",
+        "Total Statewide, Actual: Measurable Skills Rate",
     ])
-    ws.append(["California", 0.731, 0.725, 8500, 0.70, 0.69, 9200])
-    ws.append(["Texas", 75.2, 74.1, 8900, 71.5, 70.0, 9500])
-    ws.append(["National", 74.1, 73.4, 8677, 72.2, 71.2, 9397])
+    # row: ..., actual emp_q2 rate at index 11, median at 14, credential at 16.
+    def row(name, code, program, q2, median, cred):
+        return [name, code, program, 100, 80, "N/A", "N/A", "N/A", "N/A", "N/A",
+                70, q2, 70, 0.72, median, 50, cred, 60, 0.70]
+
+    ws.append(row("National", "US", "WIOA Adult", 0.741, 8677, 0.722))
+    ws.append(row("National", "US", "WIOA Dislocated Worker", 0.707, 9397, 0.735))
+    ws.append(row("California", "CA", "WIOA Adult", 0.684, 8640, 0.688))
+    ws.append(row("Texas", "TX", "WIOA Adult", 0.752, 8900, 0.715))
+    ws.append(row("California", "CA", "WIOA Youth", 0.50, 5000, 0.50))  # ignored
     buf = io.BytesIO()
     wb.save(buf)
 
     rows, national = fetch_wioa_py2023._parse_excel(buf.getvalue())
     by_code = {r["code"]: r for r in rows}
     ok = True
-    ok &= _check("wioa state rows parsed", len(rows) == 2, f"{len(rows)} rows")
+    ok &= _check("wioa adult state rows parsed", len(rows) == 2, f"{len(rows)} rows")
     ok &= _check("wioa fraction normalized to percent",
-                 by_code.get("CA", {}).get("wioa_adult_emp_q2") == 73.1)
-    ok &= _check("wioa percent left as-is",
-                 by_code.get("TX", {}).get("wioa_adult_emp_q2") == 75.2)
+                 by_code.get("CA", {}).get("wioa_adult_emp_q2") == 68.4)
     ok &= _check("wioa earnings parsed",
-                 by_code.get("CA", {}).get("wioa_adult_median_earnings_q2") == 8500)
+                 by_code.get("CA", {}).get("wioa_adult_median_earnings_q2") == 8640)
     ok &= _check("wioa national captured", national is not None)
     if national:
         ok &= _check("wioa national adult Q2 = 74.1",

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-26T11:27:29.392145+00:00",
+    "generated_at": "2026-06-26T16:18:38.932637+00:00",
     "version": "v1",
     "scope": "Ranked and compared views cover 50 states plus DC (51 jurisdictions). Territories are shown where data exists and are excluded from ranking.",
     "ranking_jurisdiction_count": 51,
@@ -11,16 +11,16 @@
     },
     "build": {
       "status": "interim",
-      "built_at": "2026-06-26T11:27:29.450879+00:00",
+      "built_at": "2026-06-26T16:18:55.122572+00:00",
       "source_file": "states.preview.json",
       "live_metrics": [
-        "snap_apt_timely"
-      ],
-      "pending_metrics": [
-        "ui_first_pay_14_21",
+        "snap_apt_timely",
         "wioa_adult_emp_q2",
         "wioa_adult_median_earnings_q2",
         "wioa_adult_credential"
+      ],
+      "pending_metrics": [
+        "ui_first_pay_14_21"
       ],
       "note": "Interim build. Live dimensions are validated and labeled with source and vintage. Pending dimensions are shown as pending a source, not as numbers, until their live feed is ingested."
     }
@@ -75,9 +75,9 @@
       "threshold_label": null,
       "dimension": "speed",
       "source_id": "wioa",
-      "vintage": null,
-      "available": false,
-      "live_fetch_blocked": true,
+      "vintage": "PY2023",
+      "available": true,
+      "live_fetch_blocked": false,
       "source_label": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration"
     },
     "wioa_adult_median_earnings_q2": {
@@ -93,9 +93,9 @@
       "threshold_label": null,
       "dimension": "outcome",
       "source_id": "wioa",
-      "vintage": null,
-      "available": false,
-      "live_fetch_blocked": true,
+      "vintage": "PY2023",
+      "available": true,
+      "live_fetch_blocked": false,
       "source_label": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration"
     },
     "wioa_adult_credential": {
@@ -111,9 +111,9 @@
       "threshold_label": null,
       "dimension": "outcome",
       "source_id": "wioa",
-      "vintage": null,
-      "available": false,
-      "live_fetch_blocked": true,
+      "vintage": "PY2023",
+      "available": true,
+      "live_fetch_blocked": false,
       "source_label": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration"
     }
   },
@@ -138,25 +138,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 87.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 10660,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 80.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -185,25 +185,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 84.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 12294,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 70.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -232,25 +232,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 72.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 9573,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 72.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -279,25 +279,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 78.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7592,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 74.5,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -326,25 +326,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 68.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8640,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 68.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -373,25 +373,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 72.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 9714,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 78.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -420,25 +420,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 79.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8930,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 72.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -467,25 +467,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 81.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8389,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 68.9,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -514,25 +514,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 71.0,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 12866,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 47.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -561,25 +561,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 86.0,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 9984,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 76.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -608,25 +608,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 83.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8997,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 72.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -655,25 +655,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 53.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 6240,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 73.5,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -702,25 +702,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 75.0,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8725,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 63.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -749,25 +749,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 74.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8204,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 73.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -796,25 +796,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 80.5,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 10293,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 73.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -843,25 +843,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 80.5,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8482,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 71.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -890,25 +890,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 77.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8292,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 73.9,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -937,25 +937,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 74.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8466,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 79.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -984,25 +984,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 78.9,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8571,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 74.5,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1031,25 +1031,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 76.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8255,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 78.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1078,25 +1078,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 72.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8748,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 65.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1125,25 +1125,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 80.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 9360,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 61.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1172,25 +1172,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 72.0,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8283,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 62.9,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1219,25 +1219,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 87.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 9744,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 84.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1266,25 +1266,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 79.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 9762,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 76.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1313,25 +1313,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 88.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7863,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 80.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1360,25 +1360,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 74.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8569,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 57.0,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1407,25 +1407,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 66.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8055,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 35.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1454,25 +1454,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 83.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8858,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 77.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1501,25 +1501,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 74.5,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7935,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 81.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1548,25 +1548,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 80.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 10099,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 74.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1595,25 +1595,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 69.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7692,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 63.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1642,25 +1642,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 81.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 11172,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 70.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1689,25 +1689,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 68.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8233,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 60.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1736,25 +1736,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 80.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8706,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 64.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1783,25 +1783,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 78.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 11185,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 66.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1830,25 +1830,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 73.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8261,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 82.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1877,25 +1877,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 74.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7993,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 75.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1924,25 +1924,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 69.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 9203,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 74.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -1971,25 +1971,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 75.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8047,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 71.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2018,25 +2018,25 @@
           "null_reason": "source_host_blocked_by_network_policy"
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 57.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 3900,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 62.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2065,25 +2065,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 86.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 9226,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 60.0,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2112,25 +2112,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 81.5,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7890,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 73.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2159,25 +2159,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 71.9,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7091,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 61.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2206,25 +2206,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 82.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8259,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 69.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2253,25 +2253,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 75.0,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7855,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 72.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2300,25 +2300,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 67.0,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7305,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 63.0,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2347,25 +2347,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 75.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8186,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 66.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2394,25 +2394,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 74.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8880,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 67.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2441,25 +2441,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 83.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 9043,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 74.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2488,25 +2488,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 69.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 10844,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 73.4,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2535,25 +2535,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 77.2,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 7770,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 77.1,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2582,25 +2582,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 78.3,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 8198,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 65.8,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2629,25 +2629,25 @@
           "null_reason": null
         },
         "wioa_adult_emp_q2": {
-          "value": null,
+          "value": 75.6,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_median_earnings_q2": {
-          "value": null,
+          "value": 12562,
           "unit": "usd",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         },
         "wioa_adult_credential": {
-          "value": null,
+          "value": 67.7,
           "unit": "percent",
-          "vintage": null,
+          "vintage": "PY2023",
           "source": "WIOA State Performance (ETA-9169), PY2023, DOL Employment and Training Administration",
-          "null_reason": "source_host_blocked_by_network_policy"
+          "null_reason": null
         }
       },
       "flags": {
@@ -2662,7 +2662,7 @@
       "url": "https://oui.doleta.gov/unemploy/csv/9050.csv",
       "host": "blocked",
       "status": null,
-      "fetched_at": "2026-06-26T11:27:28.874993+00:00",
+      "fetched_at": "2026-06-26T16:18:38.329453+00:00",
       "landing": "https://oui.doleta.gov/unemploy/DataDownloads.asp",
       "report_builder": "https://oui.doleta.gov/unemploy/btq.asp",
       "raw_files": [],
@@ -2701,7 +2701,7 @@
       "url": "https://www.fns.usda.gov/snap/qc/timeliness/apt-fy24",
       "host": "blocked",
       "status": null,
-      "fetched_at": "2026-06-26T11:27:29.014314+00:00",
+      "fetched_at": "2026-06-26T16:18:38.822480+00:00",
       "landing": "https://www.fns.usda.gov/snap/qc/timeliness",
       "raw_files": [
         "data/raw/snap_apt_fy24_published.csv"
@@ -2734,37 +2734,22 @@
       ]
     },
     {
-      "url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY2023%20Annual%20Report%20Accessible%20File.xlsx",
-      "pdf_url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY%202023%20WIOA%20National%20Performance%20Summary.pdf",
-      "host": "blocked",
+      "url": "manual",
+      "host": "manual_upload",
       "status": null,
-      "fetched_at": "2026-06-26T11:27:29.390466+00:00",
+      "fetched_at": "2026-06-26T16:18:38.930073+00:00",
       "at_a_glance_not_used": "https://www.dol.gov/agencies/eta/performance/wioa-performance",
-      "archive": "https://www.dol.gov/agencies/eta/performance/results-archive",
-      "raw_files": [],
-      "attempts": [
-        {
-          "url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY2023%20Annual%20Report%20Accessible%20File.xlsx",
-          "host": "blocked",
-          "status": null,
-          "blocked": true,
-          "deny_reason": "host_not_allowed"
-        },
-        {
-          "url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY%202023%20WIOA%20National%20Performance%20Summary.pdf",
-          "host": "blocked",
-          "status": null,
-          "blocked": true,
-          "deny_reason": "host_not_allowed"
-        }
+      "raw_files": [
+        "data/raw/manual/PY2023_Annual_Report_Accessible_File.xlsx"
       ],
-      "live_fetch_blocked": true,
+      "live_fetch_blocked": false,
+      "source_of_record": "data/raw/manual/PY2023_Annual_Report_Accessible_File.xlsx",
       "source_id": "wioa",
       "requested_vintage": "PY2023",
-      "vintage": null,
-      "blocked": true,
+      "vintage": "PY2023",
+      "blocked": false,
       "notes": [
-        "No WIOA PY2023 state rows available in this environment; the DOL host is blocked by the network policy and the brief carries only national PY2023 headline figures, not a state table."
+        "Parsed user-provided file: PY2023_Annual_Report_Accessible_File.xlsx"
       ]
     }
   ]

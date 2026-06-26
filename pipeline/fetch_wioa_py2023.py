@@ -27,19 +27,6 @@ SOURCE_ID = "wioa"
 AT_A_GLANCE = "https://www.dol.gov/agencies/eta/performance/wioa-performance"
 ARCHIVE = "https://www.dol.gov/agencies/eta/performance/results-archive"
 
-# Column header fragments mapped to canonical metric names. The Accessible
-# File labels vary slightly by program year, so matching is fragment-based.
-_ADULT_COLUMN_HINTS = {
-    "wioa_adult_emp_q2": ("adult", "employment", "2nd quarter"),
-    "wioa_adult_emp_q4": ("adult", "employment", "4th quarter"),
-    "wioa_adult_median_earnings_q2": ("adult", "median earnings"),
-    "wioa_adult_credential": ("adult", "credential"),
-    "wioa_adult_msg": ("adult", "measurable skill"),
-}
-
-# Dislocated Worker median earnings column, needed for the PY2023 vintage check.
-_DW_EARNINGS_HINT = ("dislocated", "median earnings")
-
 
 def _pdf_backend_available() -> bool:
     """Lazily probe for a usable PDF text backend without polluting output.
@@ -81,99 +68,145 @@ def _file_urls(program_year: int) -> dict[str, str]:
 
 
 def _parse_excel(content: bytes) -> tuple[list[dict], dict | None]:
-    """Best-effort parse of the Accessible File Excel.
+    """Parse the WIOA Annual Report Accessible File.
 
-    Returns (state_rows, national). Assumptions are documented, since the
-    layout shifts year to year: a header row names a state column and the
-    Title I indicator columns; metric columns are matched by header fragments.
-    Rows that do not map to a canonical jurisdiction (notes, blanks) are
-    skipped for the state table; a national or U.S. total row, when present, is
-    captured separately so the validator can confirm the vintage. If the header
-    cannot be located, an empty result is returned and the caller treats the
-    table as unavailable rather than guessing.
+    Layout: a Performance sheet with one row per (state, program). The state is
+    a State Name / State Code pair, the program is in a Program column (WIOA
+    Adult, WIOA Dislocated Worker, and so on), and each indicator appears as a
+    Target column and an Actual column. We read the Actual columns for the Title
+    I Adult program per state, and capture the National (US) row for the vintage
+    check, including Dislocated Worker median earnings. Returns (state_rows,
+    national); rates stored as fractions (0.74) are converted to percent (74.0).
     """
     import io
 
     from openpyxl import load_workbook
 
     wb = load_workbook(io.BytesIO(content), read_only=True, data_only=True)
+    ws = _performance_sheet(wb)
+    if ws is None:
+        return [], None
+    grid = list(ws.iter_rows(values_only=True))
+    if not grid:
+        return [], None
+    header = [("" if c is None else str(c)).strip() for c in grid[0]]
+    col = _performance_columns(header)
+    if col.get("code") is None or col.get("program") is None:
+        return [], None
+
     rows: list[dict] = []
-    national: dict | None = None
-    for ws in wb.worksheets:
-        grid = [[(c if c is not None else "") for c in row]
-                for row in ws.iter_rows(values_only=True)]
-        header_idx, state_col, metric_cols = _locate_header(grid)
-        if header_idx is None:
+    national = {"adult": {}, "dislocated_worker": {}}
+    for r in grid[1:]:
+        program = str(_cell(r, col["program"])).strip()
+        code_raw = _cell(r, col["code"])
+        name_raw = _cell(r, col.get("state"))
+        is_national = (
+            str(code_raw).strip().upper() == "US"
+            or str(name_raw).strip().lower() == "national"
+        )
+        adult_vals = {
+            "wioa_adult_emp_q2": _rate(r, col.get("emp_q2")),
+            "wioa_adult_emp_q4": _rate(r, col.get("emp_q4")),
+            "wioa_adult_median_earnings_q2": _money(r, col.get("median")),
+            "wioa_adult_credential": _rate(r, col.get("credential")),
+            "wioa_adult_msg": _rate(r, col.get("msg")),
+        }
+        if is_national:
+            if program == "WIOA Adult":
+                national["adult"] = {
+                    "emp_q2": adult_vals["wioa_adult_emp_q2"],
+                    "median_earnings_q2": adult_vals["wioa_adult_median_earnings_q2"],
+                }
+            elif program == "WIOA Dislocated Worker":
+                national["dislocated_worker"]["median_earnings_q2"] = _money(
+                    r, col.get("median")
+                )
             continue
-        for r in grid[header_idx + 1:]:
-            if state_col >= len(r):
-                continue
-            label = str(r[state_col]).strip()
-            vals = {
-                metric: (_num(r[col]) if col < len(r) else None)
-                for metric, col in metric_cols.items()
-            }
-            code = states.try_normalize_code(label)
-            if code:
-                record = {"code": code, "name": states.display_name(code)}
-                record.update(vals)
-                rows.append(record)
-            elif label.lower() in ("national", "u.s.", "u.s. total", "us total",
-                                   "united states", "total"):
-                national = _national_block(vals)
-        if rows:
-            break
+        if program != "WIOA Adult":
+            continue
+        code = states.try_normalize_code(str(code_raw)) or states.try_normalize_code(
+            str(name_raw)
+        )
+        if not code:
+            continue
+        record = {"code": code, "name": states.display_name(code)}
+        record.update(adult_vals)
+        rows.append(record)
+
+    if not (national["adult"] or national["dislocated_worker"]):
+        national = None
     return rows, national
 
 
-def _national_block(vals: dict) -> dict:
-    """Shape a national total row into the structure the validator expects."""
+def _performance_sheet(wb):
+    """Return the per-state performance sheet, or None."""
+    for ws in wb.worksheets:
+        if ws.title.strip().lower() == "performance":
+            return ws
+    # Fallback: first sheet whose header names a State Code and a Program column.
+    for ws in wb.worksheets:
+        first = next(ws.iter_rows(values_only=True), None)
+        if not first:
+            continue
+        low = [("" if c is None else str(c)).strip().lower() for c in first]
+        if "state code" in low and "program" in low:
+            return ws
+    return None
+
+
+def _performance_columns(header: list[str]) -> dict:
+    low = [h.lower() for h in header]
+
+    def find(*needles):
+        for i, h in enumerate(low):
+            if all(n in h for n in needles):
+                return i
+        return None
+
     return {
-        "adult": {
-            "emp_q2": vals.get("wioa_adult_emp_q2"),
-            "median_earnings_q2": vals.get("wioa_adult_median_earnings_q2"),
-        },
-        "dislocated_worker": {
-            "median_earnings_q2": vals.get("wioa_dw_median_earnings_q2"),
-        },
+        "state": find("state name"),
+        "code": find("state code"),
+        "program": find("program"),
+        "emp_q2": find("actual", "employment q2 rate"),
+        "emp_q4": find("actual", "employment q4 rate"),
+        "median": find("actual", "median earnings"),
+        "credential": find("actual", "credential rate"),
+        "msg": find("actual", "measurable skills rate"),
     }
 
 
-def _locate_header(grid: list[list]):
-    """Find the header row and the column indices we care about."""
-    hint_map = dict(_ADULT_COLUMN_HINTS)
-    hint_map["wioa_dw_median_earnings_q2"] = _DW_EARNINGS_HINT
-    for idx, row in enumerate(grid[:40]):
-        lowered = [str(c).strip().lower() for c in row]
-        state_col = None
-        for i, val in enumerate(lowered):
-            if val in ("state", "state name", "stname"):
-                state_col = i
-                break
-        if state_col is None:
-            continue
-        metric_cols: dict[str, int] = {}
-        for metric, hints in hint_map.items():
-            for i, val in enumerate(lowered):
-                if all(h in val for h in hints):
-                    metric_cols[metric] = i
-                    break
-        if metric_cols:
-            return idx, state_col, metric_cols
-    return None, None, {}
+def _cell(row, idx):
+    if idx is None or idx >= len(row) or row[idx] is None:
+        return ""
+    return row[idx]
 
 
-def _num(value):
-    if value is None or value == "":
+def _rate(row, idx):
+    """A WIOA rate stored as a fraction (0.74) becomes a percent (74.0)."""
+    if idx is None or idx >= len(row):
+        return None
+    v = row[idx]
+    if v is None or v == "" or str(v).strip().upper() == "N/A":
         return None
     try:
-        num = float(str(value).replace("%", "").replace(",", "").replace("$", "").strip())
+        num = float(str(v).replace("%", "").replace(",", "").strip())
     except ValueError:
         return None
-    # Excel sometimes stores rates as fractions (0.741) rather than percents.
-    if 0 < num <= 1:
+    if num <= 1.0:
         num *= 100
-    return round(num, 2)
+    return round(num, 1)
+
+
+def _money(row, idx):
+    if idx is None or idx >= len(row):
+        return None
+    v = row[idx]
+    if v is None or v == "" or str(v).strip().upper() == "N/A":
+        return None
+    try:
+        return round(float(str(v).replace("$", "").replace(",", "").strip()))
+    except ValueError:
+        return None
 
 
 def fetch_wioa_py2023(
