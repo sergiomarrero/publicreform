@@ -23,6 +23,7 @@ from bs4 import BeautifulSoup
 import anchors
 import states
 from http_util import FetchBlocked, fetch, utc_now_iso
+from manual import find_manual
 from model import SourceFetch
 
 SOURCE_ID = "snap_apt"
@@ -82,6 +83,30 @@ def _first_percent(cells: list[str]):
     return None
 
 
+def _parse_manual_csv(content: bytes) -> list[dict]:
+    """Parse a simple two-column CSV (jurisdiction, percent timely)."""
+    text = content.decode("utf-8-sig", errors="replace")
+    rows: list[dict] = []
+    reader = csv.reader(io.StringIO(text))
+    for cells in reader:
+        if len(cells) < 2:
+            continue
+        code = states.try_normalize_code(cells[0])
+        if not code:
+            continue
+        value = _first_percent(cells[1:])
+        if value is None:
+            continue
+        rows.append(
+            {
+                "code": code,
+                "name": states.display_name(code),
+                "snap_apt_timely": value,
+            }
+        )
+    return rows
+
+
 def _published_table_rows() -> list[dict]:
     """The published FY2024 APT table as transcribed in the project brief.
 
@@ -133,6 +158,48 @@ def fetch_snap_apt(fiscal_year: int = 2024, raw_dir: str = "data/raw") -> Source
     vintage = f"FY{fiscal_year}"
     candidates = _page_paths(fiscal_year)
     attempts: list[dict] = []
+
+    # A user-provided SNAP APT file in data/raw/manual/ takes precedence over
+    # both the live fetch and the brief-transcribed fallback, giving independent
+    # verification against the anchors.
+    manual_path = find_manual(
+        raw_dir,
+        [
+            {"ext": ".html", "contains": ["apt"]},
+            {"ext": ".html", "contains": ["snap"]},
+            {"ext": ".html", "contains": ["timeliness"]},
+            {"ext": ".csv", "contains": ["apt"]},
+            {"ext": ".csv", "contains": ["snap"]},
+        ],
+    )
+    if manual_path:
+        with open(manual_path, "rb") as fh:
+            content = fh.read()
+        if manual_path.lower().endswith(".html"):
+            rows = _parse_html_table(content, fiscal_year)
+        else:
+            rows = _parse_manual_csv(content)
+        notes = [f"Parsed user-provided file: {os.path.basename(manual_path)}"]
+        if not rows:
+            notes.append("No rows parsed from the provided SNAP file.")
+        return SourceFetch(
+            source_id=SOURCE_ID,
+            requested_vintage=vintage,
+            vintage=vintage,
+            rows=rows,
+            provenance={
+                "url": "manual",
+                "host": "manual_upload",
+                "status": None,
+                "fetched_at": utc_now_iso(),
+                "landing": LANDING,
+                "raw_files": [manual_path],
+                "live_fetch_blocked": False,
+                "source_of_record": manual_path,
+            },
+            blocked=len(rows) == 0,
+            notes=notes,
+        )
 
     for url in candidates:
         try:

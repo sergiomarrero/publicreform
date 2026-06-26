@@ -22,6 +22,7 @@ from datetime import date
 
 import states
 from http_util import FetchBlocked, fetch, utc_now_iso
+from manual import find_manual
 from model import SourceFetch
 
 SOURCE_ID = "ui_eta9050"
@@ -128,10 +129,53 @@ def fetch_ui_eta9050(
     month: int | None = None,
     raw_dir: str = "data/raw",
 ) -> SourceFetch:
-    """Fetch ETA 9050 for a given month. Defaults to the latest complete month."""
+    """Fetch ETA 9050 for a given month. Defaults to the latest complete month.
+
+    A file in data/raw/manual/ takes precedence over the live fetch, so the
+    pipeline can run from a user-provided ETA 9050 download with no network.
+    """
     if year is None or month is None:
         year, month = _default_period()
     vintage = f"{year:04d}-{month:02d}"
+
+    manual_path = find_manual(
+        raw_dir,
+        [
+            {"ext": ".csv", "contains": ["9050"]},
+            {"ext": ".csv", "contains": ["eta", "9050"]},
+            {"ext": ".csv", "contains": ["first", "payment"]},
+            {"ext": ".csv", "contains": ["time", "lapse"]},
+        ],
+    )
+    if manual_path:
+        with open(manual_path, "rb") as fh:
+            content = fh.read()
+        rows, notes = _parse_csv(content, year, month)
+        notes.insert(0, f"Parsed user-provided file: {os.path.basename(manual_path)}")
+        if not rows:
+            notes.append(
+                "No rows parsed from the provided file. Confirm the state column "
+                "and the within-14/21-day percentage column."
+            )
+        return SourceFetch(
+            source_id=SOURCE_ID,
+            requested_vintage=vintage,
+            vintage=vintage,
+            rows=rows,
+            provenance={
+                "url": "manual",
+                "host": "manual_upload",
+                "status": None,
+                "fetched_at": utc_now_iso(),
+                "landing": LANDING,
+                "report_builder": REPORT_BUILDER,
+                "raw_files": [manual_path],
+                "live_fetch_blocked": False,
+                "source_of_record": manual_path,
+            },
+            blocked=len(rows) == 0,
+            notes=notes,
+        )
 
     attempts: list[dict] = []
     blocked_any = False

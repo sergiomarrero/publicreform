@@ -20,6 +20,7 @@ import os
 
 import states
 from http_util import FetchBlocked, fetch, utc_now_iso
+from manual import find_manual
 from model import SourceFetch
 
 SOURCE_ID = "wioa"
@@ -188,6 +189,46 @@ def fetch_wioa_py2023(
     blocked = False
 
     os.makedirs(raw_dir, exist_ok=True)
+
+    # A user-provided Accessible File Excel in data/raw/manual/ takes precedence
+    # over the live fetch, so the pipeline can run with no network access.
+    manual_xlsx = find_manual(
+        raw_dir,
+        [
+            {"ext": ".xlsx", "contains": ["accessible"]},
+            {"ext": ".xlsx", "contains": ["wioa"]},
+            {"ext": ".xlsx", "contains": [str(program_year)]},
+            {"ext": ".xlsx", "contains": ["annual", "report"]},
+        ],
+    )
+    if manual_xlsx:
+        with open(manual_xlsx, "rb") as fh:
+            rows, national = _parse_excel(fh.read())
+        notes = [f"Parsed user-provided file: {os.path.basename(manual_xlsx)}"]
+        if not rows:
+            notes.append(
+                "No state rows parsed from the provided Excel. Confirm the sheet "
+                "names a State column and the Title I indicator columns."
+            )
+        return SourceFetch(
+            source_id=SOURCE_ID,
+            requested_vintage=vintage,
+            vintage=vintage if rows else None,
+            rows=rows,
+            national=national,
+            provenance={
+                "url": "manual",
+                "host": "manual_upload",
+                "status": None,
+                "fetched_at": utc_now_iso(),
+                "at_a_glance_not_used": AT_A_GLANCE,
+                "raw_files": [manual_xlsx],
+                "live_fetch_blocked": False,
+                "source_of_record": manual_xlsx,
+            },
+            blocked=len(rows) == 0,
+            notes=notes,
+        )
 
     # Excel first: it carries the state tables and the national total row.
     try:

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-06-22T03:08:14.160409+00:00",
+    "generated_at": "2026-06-26T11:27:29.392145+00:00",
     "version": "v1",
     "scope": "Ranked and compared views cover 50 states plus DC (51 jurisdictions). Territories are shown where data exists and are excluded from ranking.",
     "ranking_jurisdiction_count": 51,
@@ -11,7 +11,7 @@
     },
     "build": {
       "status": "interim",
-      "built_at": "2026-06-22T03:14:13.656419+00:00",
+      "built_at": "2026-06-26T11:27:29.450879+00:00",
       "source_file": "states.preview.json",
       "live_metrics": [
         "snap_apt_timely"
@@ -2662,7 +2662,7 @@
       "url": "https://oui.doleta.gov/unemploy/csv/9050.csv",
       "host": "blocked",
       "status": null,
-      "fetched_at": "2026-06-22T03:08:13.491984+00:00",
+      "fetched_at": "2026-06-26T11:27:28.874993+00:00",
       "landing": "https://oui.doleta.gov/unemploy/DataDownloads.asp",
       "report_builder": "https://oui.doleta.gov/unemploy/btq.asp",
       "raw_files": [],
@@ -2701,7 +2701,7 @@
       "url": "https://www.fns.usda.gov/snap/qc/timeliness/apt-fy24",
       "host": "blocked",
       "status": null,
-      "fetched_at": "2026-06-22T03:08:13.863615+00:00",
+      "fetched_at": "2026-06-26T11:27:29.014314+00:00",
       "landing": "https://www.fns.usda.gov/snap/qc/timeliness",
       "raw_files": [
         "data/raw/snap_apt_fy24_published.csv"
@@ -2738,7 +2738,7 @@
       "pdf_url": "https://www.dol.gov/sites/dolgov/files/ETA/Performance/pdfs/PY2023/PY%202023%20WIOA%20National%20Performance%20Summary.pdf",
       "host": "blocked",
       "status": null,
-      "fetched_at": "2026-06-22T03:08:14.158471+00:00",
+      "fetched_at": "2026-06-26T11:27:29.390466+00:00",
       "at_a_glance_not_used": "https://www.dol.gov/agencies/eta/performance/wioa-performance",
       "archive": "https://www.dol.gov/agencies/eta/performance/results-archive",
       "raw_files": [],
